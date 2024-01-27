@@ -44,22 +44,22 @@
 			<div class="flex flex-wrap items-center gap-6 ring-2 ring-black bg-slate-300 p-4">
 				<a
 					href="https://github.com/deepakrawat31"
-					class="block p-1 bg-orange-400 ring-2 ring-black shadow-neubrut-4 md:hover:shadow-none transition-all duration-300 ease-in-out"
+					class="block p-1 bg-orange-400 ring-2 ring-black md:hover:scale-95 transition-all duration-300 ease-in-out"
 					><IconBrandGithub size={32} stroke={1.5} /></a
 				>
 				<a
 					href="https://www.linkedin.com/in/deepak-rawat-987968238/"
-					class="block p-1 bg-orange-400 ring-2 ring-black shadow-neubrut-4 md:hover:shadow-none transition-all duration-300 ease-in-out"
+					class="block p-1 bg-orange-400 ring-2 ring-black md:hover:scale-95 transition-all duration-300 ease-in-out"
 					><IconBrandLinkedin size={32} stroke={1.5} /></a
 				>
 				<a
 					href="https://twitter.com/yatopotato2"
-					class="block p-1 bg-orange-400 ring-2 ring-black shadow-neubrut-4 md:hover:shadow-none transition-all duration-300 ease-in-out"
+					class="block p-1 bg-orange-400 ring-2 ring-black md:hover:scale-95 transition-all duration-300 ease-in-out"
 					><IconBrandTwitter size={32} stroke={1.5} /></a
 				>
 				<a
 					href="https://discordapp.com/users/263590414110425089"
-					class="block p-1 bg-orange-400 ring-2 ring-black shadow-neubrut-4 md:hover:shadow-none transition-all duration-300 ease-in-out"
+					class="block p-1 bg-orange-400 ring-2 ring-black md:hover:scale-95 transition-all duration-300 ease-in-out"
 					><IconBrandDiscord size={32} stroke={1.5} /></a
 				>
 			</div>

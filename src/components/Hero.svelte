@@ -22,7 +22,7 @@
 			</p>
 		{/each}
 	</div>
-	<div class="col-span-2 lg:col-span-1 flex flex-col gap-0.5 ring-2 ring-black">
+	<div class="col-span-2 lg:col-span-1 flex flex-col gap-0.5 ring-2 ring-black bg-slate-300">
 		<div
 			class="flex items-center justify-between p-2 bg-amber-400 ring-2 ring-black text-xl md:text-2xl uppercase font-bold"
 		>
