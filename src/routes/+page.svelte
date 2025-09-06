@@ -1,37 +1,8 @@
-<script>
-	import Project from '../components/Project.svelte';
-	import Header from '../components/Header.svelte';
-	import Hero from '../components/Hero.svelte';
-	import Contact from '../components/Contact.svelte';
-	import Footer from '../components/Footer.svelte';
-	import { onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
-	import { quintInOut } from 'svelte/easing';
+<script lang="ts"></script>
 
-	let animate = false;
+<s-head>
+	<title>Deepak Rawat</title>
+</s-head>
 
-	onMount(() => {
-		animate = true;
-	});
-</script>
-
-<svelte:head>
-	<title>Deepak | Frontend Developer</title>
-</svelte:head>
-
-{#if animate}
-	<div
-		class="ring-2 ring-black flex flex-col gap-0.5"
-		in:fade={{
-			duration: 800,
-			delay: 100,
-			easing: quintInOut
-		}}
-	>
-		<Header />
-		<Hero />
-		<Project />
-		<Contact />
-		<Footer />
-	</div>
-{/if}
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>

@@ -1,5 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@theme {
+   --color-surface: #EEEDEB;
+   --color-surface-container: #141414;
+   --color-surface-inverse: #141414;
+   --color-surface-inverse-container: #EEEDEB;
+   --color-surface-variant: #141414;
+   --color-on-surface: #141414;
+   --color-on-surface-container: #EEEDEB;
+   --color-on-surface--inverse: #EEEDEB;
+   --color-on-surface-inverse-container: #141414;
+   --color-primary: #41644A;
+   --color-on-primary: #EEEDEB;
+
+   --font-crude: 'TSCrude', sans-serif;
+   --font-cervanttis: 'Cervanttis', sans-serif;
+   --font-jetbrains: 'JetBrains', sans-serif;
+}
+
+@font-face {
+   font-family: TSCrude;
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: url("./lib/assets/fonts/TSCrude.woff2") format("woff2");
+}
+
+@font-face {
+   font-family: Cervanttis;
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: url("./lib/assets/fonts/Cervanttis.woff2") format("woff2");
+}
+
+@font-face {
+   font-family: JetBrains;
+   font-style: normal;
+   font-weight: 400 700;
+   font-display: swap;
+   src: url("./lib/assets/fonts/JetBrainsMono.woff2") format("woff2");
+}
