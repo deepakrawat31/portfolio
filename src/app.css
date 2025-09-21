@@ -4,16 +4,16 @@
 
 
 @theme {
-   --color-surface: #EEEDEB;
-   --color-surface-container: #141414;
-   --color-surface-inverse: #141414;
-   --color-surface-inverse-container: #EEEDEB;
-   --color-surface-variant: #141414;
-   --color-on-surface: #141414;
-   --color-on-surface-container: #EEEDEB;
-   --color-on-surface--inverse: #EEEDEB;
-   --color-on-surface-inverse-container: #141414;
-   --color-primary: #41644A;
+   --color-surface: #141414;
+   --color-surface-container: #EEEDEB;
+   --color-surface-inverse: #EEEDEB;
+   --color-surface-inverse-container: #141414;
+   --color-surface-variant: #262626;
+   --color-on-surface: #EEEDEB;
+   --color-on-surface-container: #141414;
+   --color-on-surface--inverse: #141414;
+   --color-on-surface-inverse-container: #EEEDEB;
+   --color-primary: #FF9925;
    --color-on-primary: #EEEDEB;
 
    --font-crude: 'TSCrude', sans-serif;
