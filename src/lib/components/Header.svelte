@@ -13,14 +13,14 @@
 			gsap.to(headerEl, {
 				y: -headerEl!.offsetHeight,
 				duration: 0.6,
-				ease: 'power2.out'
+				ease: 'power1.inOut'
 			});
 			isHidden = true;
 		} else if (current < lastScroll && isHidden === true) {
 			gsap.to(headerEl, {
 				y: 0,
 				duration: 0.6,
-				ease: 'power2.out'
+				ease: 'power1.inOut'
 			});
 			isHidden = false;
 		}
@@ -29,8 +29,8 @@
 	};
 
 	$effect(() => {
-		const tl = gsap.timeline({ defaults: { ease: 'expo.out', duration: 1 } });
-		tl.from(headerEl, { opacity: 0 }).from(linkEl, { y: -10, opacity: 0 }, '-=0.4');
+		// const tl = gsap.timeline({ defaults: { ease: 'power1.inOut', duration: 0.6 } });
+		// tl.from(headerEl, { opacity: 0 }).from(linkEl, { y: -10, opacity: 0 }, '-=0.3');
 
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
@@ -38,7 +38,7 @@
 </script>
 
 <header
-	class="sticky top-0 z-50 border-b border-b-surface-variant bg-surface px-4"
+	class="fixed top-0 z-50 w-full border-b border-b-surface-variant bg-surface px-4"
 	bind:this={headerEl}
 >
 	<nav
