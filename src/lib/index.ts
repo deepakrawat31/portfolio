@@ -2,7 +2,8 @@
 export const mainHeading =
 	'Frontend developer passionate about transforming ideas from sketches to fully functional websites. Skilled at delivering responsive and user-friendly interfaces, with experience collaborating closely to meet client expectations in both freelance and full-time roles.';
 
-export const subHeading = '';
+export const subHeading =
+	'Eager to grow and refine my skills by taking on new challenges, from small to larger projects.';
 
 export const projects = [
 	{
@@ -14,4 +15,9 @@ export const projects = [
 		img: '../assets/img/avant.webp',
 		link: 'https://avant-studio.vercel.app'
 	}
+];
+
+export const services = [
+	{ id: 0, title: 'web development', description: '' },
+	{ id: 1, title: 'web design', description: '' }
 ];
