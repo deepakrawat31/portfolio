@@ -9,9 +9,9 @@
 	>
 		<div class="flex flex-col gap-4">
 			<h4 class="w-full max-w-xl text-xl leading-relaxed text-pretty md:text-2xl">
-				Deepak - Frontend Developer with hands on experience. I've built and deployed multiple
-				websites, freelanced on client projects. Ready to create impactful experiences while growing
-				my skills.
+				Deepak - Frontend Developer with hands on experience. I've developed multiple websites,
+				freelanced on client projects. Ready to create impactful experiences while growing my
+				skills.
 			</h4>
 			<p class="w-full max-w-xl leading-relaxed text-pretty opacity-40">
 				Eager to grow and refine my skills by taking on new challenges, from small to larger
@@ -19,11 +19,15 @@
 			</p>
 			<ul class="flex flex-col gap-4 md:gap-6">
 				{#each services as service}
-					<li class="flex flex-col gap-4 text-xl uppercase md:gap-6 md:text-2xl">
-						<span class="flex gap-4 md:gap-6">
-							<span>{service.id + 1}.</span>
-							<h6>{service.title}</h6>
+					<li class="flex flex-col gap-4 self-end md:gap-6">
+						<hr class="text-surface-variant" />
+						<span class="uppercase">
+							{service.title}
 						</span>
+						<span>[0{service.id + 1}]</span>
+						<p class="w-full max-w-xl leading-relaxed text-pretty opacity-40">
+							{service.description}
+						</p>
 					</li>
 				{/each}
 			</ul>

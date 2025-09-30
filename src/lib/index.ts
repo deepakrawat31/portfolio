@@ -18,6 +18,16 @@ export const projects = [
 ];
 
 export const services = [
-	{ id: 0, title: 'web development', description: '' },
-	{ id: 1, title: 'web design', description: '' }
+	{
+		id: 0,
+		title: 'website development',
+		description:
+			'Creative and fully responsive website designs created from scratch with attention to every detail.'
+	},
+	{
+		id: 1,
+		title: 'website design',
+		description:
+			'Creative and fully responsive website designs created from scratch with attention to every detail.'
+	}
 ];
