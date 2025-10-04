@@ -29,8 +29,8 @@
 	};
 
 	$effect(() => {
-		// const tl = gsap.timeline({ defaults: { ease: 'power1.inOut', duration: 0.6 } });
-		// tl.from(headerEl, { opacity: 0 }).from(linkEl, { y: -10, opacity: 0 }, '-=0.3');
+		const tl = gsap.timeline({ defaults: { ease: 'power1.inOut', duration: 0.6 } });
+		tl.from(headerEl, { opacity: 0 }).from(linkEl, { y: -10, opacity: 0, delay: 0.1 });
 
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);

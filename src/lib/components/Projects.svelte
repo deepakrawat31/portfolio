@@ -2,17 +2,35 @@
 	import avantStudio from '$lib/assets/img/avantStudio.webp';
 	import crossroads from '$lib/assets/img/crossroads.webp';
 	import IconArrowRightBold from 'phosphor-icons-svelte/IconArrowRightBold.svelte';
+
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+	let boxEl: HTMLElement | null = null;
+	let projectEl: HTMLElement | null = null;
+
+	$effect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		const tl = gsap.timeline({
+			defaults: {
+				ease: 'power1.inOut',
+				duration: 0.6
+			}
+		});
+		tl.from(boxEl, { opacity: 0 });
+	});
 </script>
 
-<section class="relative isolate px-4">
+<section class="relative isolate px-4" bind:this={boxEl}>
 	<span class="absolute inset-0 bottom-0 -z-10 border-b border-surface-variant"></span>
 	<div
 		class="flex min-h-[80dvh] w-full max-w-6xl flex-wrap items-center gap-4 place-self-center border-x border-x-surface-variant p-4 md:p-6 2xl:max-w-7xl"
+		bind:this={projectEl}
 	>
 		<div class="flex min-h-[80dvh] w-full max-w-sm flex-col gap-4">
 			<h4 class="flex items-baseline gap-4">
 				<span class="text-base md:text-lg">Avant Studio</span>
-				<span class="text-xs uppercase opacity-40">website / 1</span>
+				<span class="text-xs uppercase opacity-40">[website / 01]</span>
 			</h4>
 			<hr class="text-surface-variant" />
 			<a
@@ -39,7 +57,7 @@
 		<div class="flex min-h-[80dvh] w-full max-w-sm flex-col gap-4">
 			<h4 class="flex items-baseline gap-4">
 				<span class="text-base md:text-lg">Crossroads</span>
-				<span class="text-xs uppercase opacity-40">website / 2</span>
+				<span class="text-xs uppercase opacity-40">[website / 02]</span>
 			</h4>
 			<hr class="text-surface-variant" />
 			<a
