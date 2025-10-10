@@ -1,8 +1,9 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export default function Header() {
   let headerEl = useRef<HTMLElement | null>(null);
@@ -10,7 +11,7 @@ export default function Header() {
   let lastScroll = 0;
   let isHidden = false;
 
-  useEffect(() => {
+  useGSAP(() => {
     let tl = gsap.timeline({ defaults: { duration: 0.4, ease: "sine.inOut" } });
 
     tl.from(headerEl.current, {

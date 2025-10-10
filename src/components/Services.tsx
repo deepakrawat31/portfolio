@@ -1,9 +1,10 @@
 "use client";
 
 import { services } from "@/lib";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Services() {
@@ -12,7 +13,7 @@ export default function Services() {
   let headingEl = useRef<HTMLHeadingElement | null>(null);
   let paraEl = useRef<HTMLParagraphElement | null>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     let tl = gsap.timeline({
       defaults: { duration: 0.4, ease: "sine.inOut" },
     });
@@ -38,12 +39,6 @@ export default function Services() {
       opacity: 0,
     });
 
-    serviceTl.from(serviceEl.current, {
-      y: -20,
-      opacity: 0,
-      stagger: 0.2,
-    });
-
     textTl
       .from(headingEl.current, {
         y: -20,
@@ -53,7 +48,17 @@ export default function Services() {
         y: -20,
         opacity: 0,
       });
-  }, []);
+
+    serviceTl.from(serviceEl.current, {
+      y: -20,
+      opacity: 0,
+      stagger: {
+        each: 0.2,
+        ease: "sine.inOut",
+        from: "start",
+      },
+    });
+  });
 
   return (
     <section className="relative isolate px-4" ref={boxEl}>
@@ -79,7 +84,7 @@ export default function Services() {
           <ul className="flex flex-col gap-4 md:gap-6" ref={serviceEl}>
             {services.map((service) => (
               <li
-                className="flex w-full max-w-xl flex-col gap-4 md:gap-6"
+                className="service flex w-full max-w-xl flex-col gap-4 md:gap-6"
                 key={service.id}
               >
                 <hr className="text-surface-variant" />

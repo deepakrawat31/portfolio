@@ -1,8 +1,10 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import Link from "next/link";
+import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function footer() {
@@ -10,7 +12,7 @@ export default function footer() {
   let topDivEl = useRef<HTMLDivElement | null>(null);
   let botDivEl = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     let tl = gsap.timeline({
       defaults: { duration: 0.4, ease: "sine.inOut" },
     });
@@ -44,8 +46,12 @@ export default function footer() {
       <div className="border-x-surface-variant flex h-[40dvh] w-full max-w-6xl flex-col justify-between gap-4 place-self-center border-x p-4 md:p-6 2xl:max-w-7xl">
         <div className="flex justify-between gap-4" ref={topDivEl}>
           <nav className="flex flex-col gap-4 **:opacity-40 **:transition-opacity **:duration-400 **:hover:opacity-100">
-            <a href="/">Github</a>
-            <a href="/">X / Twitter</a>
+            <Link href="https://github.com/deepakrawat31" target="_blank">
+              Github
+            </Link>
+            <a href="https://x.com/yatopotato2" target="_blank">
+              X / Twitter
+            </a>
           </nav>
           <span className="font-cervanttis text-primary text-2xl font-bold">
             deepak rawat

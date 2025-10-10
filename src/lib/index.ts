@@ -10,6 +10,7 @@ export const projects = [
     id: 0,
     title: "Avant Studio",
     type: "Website",
+    slug: "avant-studio",
     description:
       "Avant Studio is a furniture e-commerce site that exudes a sleek and modern aesthetic, blending minimalism with a touch of sophistication. The muted color palette paired with clean typography creates an elegant and inviting atmosphere.",
     img: "/imgs/avantStudio.webp",
@@ -19,6 +20,7 @@ export const projects = [
     id: 1,
     title: "Crossroads",
     type: "Website",
+    slug: "crossroads",
     description:
       "Crossroads is an immersive choice-based adventure game powered by AI, where every decision you make shapes your journey and determine your ultimate fate.",
     img: "/imgs/crossroads.webp",
@@ -31,7 +33,7 @@ export const services = [
     id: 0,
     title: "website development",
     description:
-      "Creative and fully responsive website designs created from scratch with attention to every detail.",
+      "Modern, reliable, and user-focused websites crafted with precision to deliver seamless functionality across every device.",
   },
   {
     id: 1,

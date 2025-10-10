@@ -1,17 +1,18 @@
 "use client";
 
 import { mainHeading } from "@/lib";
+import { useGSAP } from "@gsap/react";
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import gsap from "gsap";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export default function MainSection() {
   let boxEl = useRef<HTMLElement | null>(null);
   let headingEl = useRef<HTMLHeadingElement | null>(null);
   let linkEl = useRef<HTMLAnchorElement | null>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     let tl = gsap.timeline({ defaults: { duration: 0.4, ease: "sine.inOut" } });
 
     tl.from(boxEl.current, {
@@ -40,7 +41,7 @@ export default function MainSection() {
           </h2>
         </span>
         <Link
-          href={"/"}
+          href={"/about"}
           className="group flex w-full max-w-xl items-center justify-between gap-4"
           ref={linkEl}
         >

@@ -1,11 +1,12 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { projects } from "../lib";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -13,7 +14,7 @@ export default function Projects() {
   let boxEl = useRef<HTMLElement | null>(null);
   let projectEl = useRef<HTMLUListElement | null>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     let tl = gsap.timeline({
       defaults: { duration: 0.4, ease: "sine.inOut" },
     });
@@ -56,7 +57,7 @@ export default function Projects() {
               </h4>
               <hr className="text-surface-variant" />
               <Link
-                href="/"
+                href={project.slug}
                 className="group border-surface-variant relative isolate flex flex-1 items-center justify-center overflow-hidden border"
               >
                 <Image
