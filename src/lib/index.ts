@@ -11,6 +11,15 @@ export const projects = [
     title: "Avant Studio",
     type: "Website",
     slug: "avant-studio",
+    date: 2024,
+    client: "personal",
+    stack: [
+      { id: 0, title: "react.js" },
+      { id: 1, title: "next.js" },
+      { id: 2, title: "tailwind css" },
+      { id: 3, title: "drizzle" },
+      { id: 4, title: "libsql" },
+    ],
     description:
       "Avant Studio is a furniture e-commerce site that exudes a sleek and modern aesthetic, blending minimalism with a touch of sophistication. The muted color palette paired with clean typography creates an elegant and inviting atmosphere.",
     img: "/imgs/avantStudio.webp",
@@ -21,6 +30,15 @@ export const projects = [
     title: "Crossroads",
     type: "Website",
     slug: "crossroads",
+    date: 2024,
+    client: "personal",
+    stack: [
+      { id: 0, title: "react.js" },
+      { id: 1, title: "next.js" },
+      { id: 2, title: "tailwind css" },
+      { id: 3, title: "zustland" },
+      { id: 4, title: "vercel ai sdk" },
+    ],
     description:
       "Crossroads is an immersive choice-based adventure game powered by AI, where every decision you make shapes your journey and determine your ultimate fate.",
     img: "/imgs/crossroads.webp",
@@ -41,4 +59,17 @@ export const services = [
     description:
       "Creative and fully responsive website designs created from scratch with attention to every detail.",
   },
+];
+
+export const expertise = [
+  { id: 0, title: "HTML" },
+  { id: 1, title: "CSS" },
+  { id: 2, title: "JavaScript" },
+  { id: 3, title: "TypeScript" },
+  { id: 4, title: "Node.js" },
+  { id: 5, title: "React.js" },
+  { id: 6, title: "Next.js" },
+  { id: 7, title: "Tailwind CSS" },
+  { id: 8, title: "GSAP" },
+  { id: 9, title: "Figma" },
 ];

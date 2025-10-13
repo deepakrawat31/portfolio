@@ -12,7 +12,6 @@ import { projects } from "../lib";
 gsap.registerPlugin(ScrollTrigger);
 export default function Projects() {
   let boxEl = useRef<HTMLElement | null>(null);
-  let projectEl = useRef<HTMLUListElement | null>(null);
 
   useGSAP(() => {
     let tl = gsap.timeline({
@@ -22,8 +21,8 @@ export default function Projects() {
     let projectTl = gsap.timeline({
       defaults: { duration: 0.4, ease: "sine.inOut" },
       scrollTrigger: {
-        trigger: projectEl.current,
-        start: "top 60%",
+        trigger: ".project-animate",
+        start: "top center",
         end: "bottom center",
       },
     });
@@ -32,10 +31,13 @@ export default function Projects() {
       opacity: 0,
     });
 
-    projectTl.from(projectEl.current, {
+    projectTl.from(".project-animate", {
       y: -20,
       opacity: 0,
-      stagger: 0.2,
+      stagger: {
+        each: 0.4,
+        ease: "sine.inOut",
+      },
     });
   }, []);
 
@@ -43,10 +45,10 @@ export default function Projects() {
     <section className="relative isolate px-4" ref={boxEl}>
       <span className="border-surface-variant absolute inset-0 bottom-0 -z-10 border-b"></span>
       <div className="border-x-surface-variant min-h-[80dvh] w-full max-w-6xl place-self-center border-x p-4 md:p-6 2xl:max-w-7xl">
-        <ul ref={projectEl} className="flex flex-wrap items-center gap-4">
+        <ul className="flex flex-wrap items-center gap-4">
           {projects.map((project) => (
             <li
-              className="flex min-h-[80dvh] w-full max-w-sm flex-col gap-4"
+              className="project-animate flex min-h-[80dvh] w-full max-w-sm flex-col gap-4"
               key={project.id}
             >
               <h4 className="flex items-baseline gap-4">
