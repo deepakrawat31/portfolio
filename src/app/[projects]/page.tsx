@@ -26,6 +26,7 @@ export default function ProjectHome() {
       .from(".hr", {
         width: 0,
       })
+      .from(".image-animate", { opacity: 0 })
       .from(".text-animate", {
         opacity: 0,
         y: -20,
@@ -49,14 +50,29 @@ export default function ProjectHome() {
                 className="flex w-full flex-col gap-6 pt-24 md:gap-12"
                 key={project.id}
               >
-                <h2 className="text-animate flex w-full items-baseline gap-4 place-self-start uppercase md:gap-6">
-                  <span>{project.title}</span>
-                  <span className="text-xs opacity-40">
-                    [{project.type} / {project.id + 1}]
-                  </span>
-                </h2>
+                <div className="flex items-center justify-between gap-4 md:gap-6">
+                  <h2 className="text-animate flex items-baseline gap-4 uppercase md:gap-6">
+                    <span>{project.title}</span>
+                    <span className="text-xs opacity-40">
+                      [{project.type} / {project.id + 1}]
+                    </span>
+                  </h2>
+                  <Link
+                    href={"/"}
+                    className="border-surface-variant group text-animate relative isolate overflow-hidden rounded-full border p-3"
+                  >
+                    <ArrowLeftIcon
+                      weight="bold"
+                      className="size-4 transition-transform duration-400 group-hover:-translate-x-20"
+                    />
+                    <ArrowLeftIcon
+                      weight="bold"
+                      className="absolute bottom-3 size-4 translate-x-20 transition-transform duration-400 group-hover:translate-x-0"
+                    />
+                  </Link>
+                </div>
                 <hr className="text-surface-variant hr w-full" />
-                <div className="flex flex-col justify-between gap-4 md:flex-row md:gap-6">
+                <div className="flex flex-col gap-4 md:flex-row md:gap-6">
                   <ul className="flex flex-1 flex-col gap-4 md:gap-6">
                     <li className="text-animate text-base leading-relaxed text-pretty md:text-xl">
                       {project.description}
@@ -72,7 +88,7 @@ export default function ProjectHome() {
                       <Link
                         href={project.link}
                         target="_blank"
-                        className="underline underline-offset-2 opacity-40"
+                        className="text-end underline underline-offset-2 opacity-40"
                       >
                         {project.link}
                       </Link>
@@ -94,23 +110,8 @@ export default function ProjectHome() {
                       </ul>
                     </li>
                     <hr className="text-surface-variant hr w-full" />
-                    <li className="flex">
-                      <Link
-                        href={"/"}
-                        className="border-surface-variant group relative isolate overflow-hidden rounded-full border p-3"
-                      >
-                        <ArrowLeftIcon
-                          weight="bold"
-                          className="size-6 transition-transform duration-400 group-hover:-translate-x-20"
-                        />
-                        <ArrowLeftIcon
-                          weight="bold"
-                          className="absolute bottom-3 size-6 translate-x-20 transition-transform duration-400 group-hover:translate-x-0"
-                        />
-                      </Link>
-                    </li>
                   </ul>
-                  <div className="border-surface-variant flex min-h-[80dvh] w-full max-w-md flex-1 items-center justify-center border">
+                  <div className="border-surface-variant image-animate flex min-h-[80dvh] w-full max-w-md flex-1 items-center justify-center border">
                     <Image
                       width={400}
                       height={600}
