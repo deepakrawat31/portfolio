@@ -19,7 +19,7 @@ export default function About() {
       defaults: { duration: 0.4, ease: "sine.inOut" },
       scrollTrigger: {
         trigger: ".skill-animate",
-        start: "top center",
+        start: "top 80%",
         end: "bottom center",
       },
     });
