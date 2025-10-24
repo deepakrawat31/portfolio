@@ -51,7 +51,7 @@ export default function ProjectHome() {
                 key={project.id}
               >
                 <div className="flex items-center justify-between gap-4 md:gap-6">
-                  <h2 className="text-animate flex items-baseline gap-4 uppercase md:gap-6">
+                  <h2 className="text-animate flex flex-col items-baseline gap-4 uppercase md:flex-row md:gap-6">
                     <span>{project.title}</span>
                     <span className="text-xs opacity-40">
                       [{project.type} / {project.id + 1}]
@@ -72,7 +72,7 @@ export default function ProjectHome() {
                   </Link>
                 </div>
                 <hr className="text-surface-variant hr w-full" />
-                <div className="flex flex-col gap-4 md:flex-row md:gap-6">
+                <div className="flex flex-col gap-4 md:gap-6 lg:flex-row">
                   <ul className="flex flex-1 flex-col gap-4 md:gap-6">
                     <li className="text-animate text-base leading-relaxed text-pretty md:text-xl">
                       {project.description}
@@ -111,13 +111,14 @@ export default function ProjectHome() {
                     </li>
                     <hr className="text-surface-variant hr w-full" />
                   </ul>
-                  <div className="border-surface-variant image-animate flex min-h-[80dvh] w-full max-w-md flex-1 items-center justify-center border">
+                  <div className="border-surface-variant image-animate flex min-h-[80dvh] w-full max-w-md flex-1 items-center justify-center place-self-center border">
                     <Image
                       width={400}
                       height={600}
                       alt={project.title}
                       src={project.img}
-                      className="scale-90"
+                      className="h-auto w-auto scale-90"
+                      priority
                     ></Image>
                   </div>
                 </div>
